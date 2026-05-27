@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Teodoro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="avatar-wrapper">
+        <img class="avatar" src="static/images/profile.jpg" alt="Samuel Teodoro" onerror="this.style.display='none'; document.querySelector('.avatar-fallback').style.display='flex'" />
+        <div class="avatar-fallback">ST</div>
+      </div>
+      <h1>Samuel Teodoro</h1>
+      <p class="subtitle">PhD Student at KAIST</p>
+      <nav class="links">
+          <a href="mailto:sateodoro@kaist.ac.kr" target="_blank" rel="noopener">E-Mail</a>
+        <span class="sep">/</span>
+        <a href="https://scholar.google.com/citations?user=-W-_ROYAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <span class="sep">/</span>
+        <a href="https://github.com/sateodoro" target="_blank" rel="noopener">GitHub</a>
+        <span class="sep">/</span>
+        <a href="https://www.linkedin.com/in/samuel-teodoro/" target="_blank" rel="noopener">LinkedIn</a>
+<!--        <span class="sep">/</span>-->
+<!--        <a href="#" target="_blank" rel="noopener">X</a>-->
+<!--        <span class="sep">/</span>-->
+<!--        <a href="#" target="_blank" rel="noopener">CV</a>-->
+      </nav>
+    </header>
+
+    <!-- About -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am currently a PhD student at the
+        <a href="https://viclab.kaist.ac.kr" target="_blank" rel="noopener">Video and Image Computing Lab (VICLab)</a> at
+        <a href="https://kaist.ac.kr" target="_blank" rel="noopener">KAIST</a>,
+        advised by <a href="https://www.viclab.kaist.ac.kr/professor" target="_blank" rel="noopener">Prof. Munchurl Kim</a>.
+        I received my BS in Electrical Engineering from the
+        <a href="https://uplb.edu.ph/" target="_blank" rel="noopener">University of the Philippines Los Baños</a>.
+        My research focuses on controllable image and video generation and editing using diffusion models.
+      </p>
+      <p>
+        Outside of research, I enjoy photography.
+      </p>
+    </section>
+
+    <!-- News -->
+    <section>
+      <h2>News</h2>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">Apr, 2026</span>
+          <span class="news-text">Attended <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> and presented our work <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a>.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jan, 2026</span>
+          <span class="news-text">Our work <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</a> got accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>!</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section>
+      <h2>Publications</h2>
+
+      <div class="pub-list">
+
+        <div class="pub-entry">
+          <div class="pub-thumb">
+            <video autoplay loop muted playsinline>
+              <source src="static/videos/motiongrounder.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="pub-info">
+            <p class="pub-title"><strong>MotionGrounder: Grounded Multi-Object Motion Transfer via Diffusion Transformer</strong></p>
+            <p class="pub-venue">Under Review</p>
+            <p class="pub-authors">
+              <strong>Samuel Teodoro*</strong>, Yun Chen, Agus Gunawan, Soo Ye Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup>
+            </p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2604.00853" class="btn" target="_blank" rel="noopener">Paper</a>
+              <a href="https://kaist-viclab.github.io/motiongrounder-site/" class="btn" target="_blank" rel="noopener">Project Page</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-thumb">
+            <img src="static/images/omnitext.png" alt="OmniText"/>
+          </div>
+          <div class="pub-info">
+              <p class="pub-title"><strong>OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</strong></p>
+              <p class="pub-venue"><strong>ICLR 2026</strong></p>
+            <p class="pub-authors">
+              Agus Gunawan*, <strong>Samuel Teodoro*</strong>, Yun Chen, Soo Ye Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup>
+            </p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2510.24093" class="btn" target="_blank" rel="noopener">Paper</a>
+              <a href="https://kaist-viclab.github.io/omnitext-site/" class="btn" target="_blank" rel="noopener">Project Page</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-thumb">
+            <img src="static/images/primedit.png" alt="PRIMEdit" style="background:#ffffff;" />
+          </div>
+          <div class="pub-info">
+              <p class="pub-title"><strong>PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with Benchmark Dataset</strong></p>
+            <p class="pub-venue">Under Review</p>
+            <p class="pub-authors">
+              <strong>Samuel Teodoro*</strong>, Agus Gunawan*, Soo Ye Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup>
+            </p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2412.12877" class="btn" target="_blank" rel="noopener">Paper</a>
+              <a href="https://kaist-viclab.github.io/primedit-site/" class="btn" target="_blank" rel="noopener">Project Page</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>Last updated May 2026</p>
+    </footer>
+
+  </div>
+</body>
+</html>
