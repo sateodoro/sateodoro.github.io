@@ -11,6 +11,8 @@
   --border:       #2a4060;
   --accent:       #7aafd4;
   --accent-hover: #a3c9e8;
+  --accent-teal:  #00d4a8;
+  --accent-gold:  #e8b84b;
   --text:         #ffffff;
   --text-muted:   #94a3b8;
   --white:        #ffffff;
@@ -53,8 +55,9 @@ header {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--border);
+  border: 3px solid var(--accent);
   display: block;
+  box-shadow: 0 0 0 4px rgba(0, 212, 168, 0.2), 0 0 24px rgba(122, 175, 212, 0.35);
 }
 
 .avatar-fallback {
@@ -62,7 +65,7 @@ header {
   height: 180px;
   border-radius: 50%;
   background: var(--surface);
-  border: 3px solid var(--border);
+  border: 3px solid var(--accent);
   display: none;
   align-items: center;
   justify-content: center;
@@ -81,7 +84,7 @@ header h1 {
 }
 
 .subtitle {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   margin-bottom: 8px;
 }
@@ -148,7 +151,18 @@ section h2 {
   letter-spacing: 1.5px;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent-teal), var(--accent), var(--border) 85%);
 }
 
 section p {
@@ -179,17 +193,18 @@ section p:last-child {
 .news-date {
   flex-shrink: 0;
   align-self: center;
-  color: var(--accent);
+  color: var(--accent-teal);
   font-size: 0.78rem;
   font-weight: 500;
   white-space: nowrap;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--accent-teal);
   border-radius: 20px;
   padding: 2px 10px;
 }
 
 .news-text {
   color: var(--text);
+  text-align: justify;
 }
 
 .news-text em {
@@ -216,13 +231,16 @@ section p:last-child {
   padding: 20px;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-teal);
   border-radius: 10px;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .pub-entry:hover {
   border-color: var(--accent);
+  border-left-color: var(--accent-teal);
   transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 212, 168, 0.08), 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .pub-thumb {
@@ -273,6 +291,15 @@ section p:last-child {
   margin-bottom: 4px;
 }
 
+.pub-venue strong {
+  display: inline-block;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  background: rgba(232, 184, 75, 0.1);
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
 .pub-authors {
   font-size: 0.85rem;
   color: var(--text-muted);
@@ -304,6 +331,13 @@ section p:last-child {
 .btn:hover {
   background: var(--accent);
   color: var(--bg);
+}
+
+.pub-footnote {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  text-align: right;
 }
 
 /* ── Teaching ── */
