@@ -340,6 +340,45 @@ section p:last-child {
   text-align: right;
 }
 
+/* ── Education ── */
+.edu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edu-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.edu-date {
+  flex-shrink: 0;
+  min-width: 148px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  padding-top: 2px;
+}
+
+.edu-info {
+  color: var(--text);
+}
+
+.edu-info strong {
+  color: var(--white);
+}
+
+@media (max-width: 520px) {
+  .edu-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
 /* ── Teaching ── */
 .teaching-list {
   list-style: none;
