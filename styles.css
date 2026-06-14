@@ -6,9 +6,9 @@
 }
 
 :root {
-  --bg:           #0d1b2e;
-  --surface:      #162438;
-  --border:       #2a4060;
+  --bg:           #06080f;
+  --surface:      #0d1020;
+  --border:       #1e2040;
   --accent:       #7aafd4;
   --accent-hover: #a3c9e8;
   --accent-teal:  #00d4a8;
@@ -48,6 +48,10 @@ header {
   position: relative;
   display: inline-block;
   margin-bottom: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent));
+  box-shadow: 0 0 24px rgba(122, 175, 212, 0.35);
 }
 
 .avatar {
@@ -55,9 +59,8 @@ header {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--accent);
+  border: none;
   display: block;
-  box-shadow: 0 0 0 4px rgba(0, 212, 168, 0.2), 0 0 24px rgba(122, 175, 212, 0.35);
 }
 
 .avatar-fallback {
