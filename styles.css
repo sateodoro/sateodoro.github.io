@@ -303,6 +303,15 @@ section p:last-child {
   border-radius: 4px;
 }
 
+.pub-venue strong a {
+  color: var(--accent-gold);
+}
+
+.pub-venue strong a:hover {
+  color: var(--accent-gold);
+  opacity: 0.8;
+}
+
 .pub-authors {
   font-size: 0.85rem;
   color: var(--text-muted);
