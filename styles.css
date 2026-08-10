@@ -349,7 +349,7 @@ section p:last-child {
   font-size: 0.78rem;
   color: var(--text-muted);
   margin-top: 10px;
-  text-align: right;
+  text-align: left;
 }
 
 /* ── Education ── */
