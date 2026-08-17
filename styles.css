@@ -451,6 +451,10 @@ footer {
   .entry { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .date-label { line-height: 1.6; }
 
+  /* news keeps the date pill beside the text on small screens */
+  .entries-news .entry { grid-template-columns: 82px minmax(0, 1fr); gap: 12px; }
+  .entries-news .entry-body { text-align: left; }
+
   .pub { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
 }
 
