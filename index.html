@@ -4,165 +4,205 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samuel Teodoro</title>
-  <link rel="stylesheet" href="styles.css" />
+  <script>try{var t=localStorage.getItem('st-theme');
+  if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300..700;1,300..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
 
-    <!-- Header -->
-    <header>
-      <div class="avatar-wrapper">
-        <img class="avatar" src="static/images/profile.jpg" alt="Samuel Teodoro" onerror="this.style.display='none'; document.querySelector('.avatar-fallback').style.display='flex'" />
-        <div class="avatar-fallback">ST</div>
-      </div>
+  <button type="button" class="theme-toggle" id="themeToggle">Light</button>
+
+  <div class="page">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <img class="avatar" src="static/images/profile.jpg" alt="Samuel Teodoro" onerror="this.style.display='none'; document.querySelector('.avatar-fallback').style.display='flex'" />
+      <div class="avatar-fallback">ST</div>
       <h1>Samuel Teodoro</h1>
-      <p class="subtitle">Ph.D. Student at KAIST</p>
-      <nav class="links">
-          <a href="mailto:sateodoro@kaist.ac.kr" target="_blank" rel="noopener">E-Mail</a>
-        <span class="sep">/</span>
+      <p class="sub">Ph.D. Student at KAIST</p>
+      <p class="contact">
+        <a href="mailto:sateodoro@kaist.ac.kr">E-Mail</a>
+        <span class="sep">&bull;</span>
         <a href="https://scholar.google.com/citations?user=-W-_ROYAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
-        <span class="sep">/</span>
+        <span class="sep">&bull;</span>
         <a href="https://github.com/sateodoro" target="_blank" rel="noopener">GitHub</a>
-        <span class="sep">/</span>
+        <span class="sep">&bull;</span>
         <a href="https://www.linkedin.com/in/samuel-teodoro/" target="_blank" rel="noopener">LinkedIn</a>
-<!--        <span class="sep">/</span>-->
+<!--        <span class="sep">&bull;</span>-->
 <!--        <a href="#" target="_blank" rel="noopener">X</a>-->
-<!--        <span class="sep">/</span>-->
+<!--        <span class="sep">&bull;</span>-->
 <!--        <a href="#" target="_blank" rel="noopener">CV</a>-->
-      </nav>
+      </p>
     </header>
 
-    <!-- About -->
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am a Ph.D. student at the
-        <a href="https://viclab.kaist.ac.kr" target="_blank" rel="noopener">Video and Image Computing Lab (VICLab)</a> at
-        <a href="https://kaist.ac.kr" target="_blank" rel="noopener">KAIST</a>,
-        advised by <a href="https://www.viclab.kaist.ac.kr/professor" target="_blank" rel="noopener">Prof. Munchurl Kim</a>.
-        I received my B.S. in Electrical Engineering from the
-        <a href="https://uplb.edu.ph/" target="_blank" rel="noopener">University of the Philippines Los Baños</a> in 2018.
-        Currently, my research focuses on controllable image and video editing using generative models.
-      </p>
-      <p>
-        Outside of research, I enjoy street and portrait photography.
-      </p>
-    </section>
+    <main>
 
-    <!-- News -->
-    <section>
-      <h2>News</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">Aug 2026</span>
-          <span class="news-text">Our work <a href="https://kaist-viclab.github.io/primedit-site/" target="_blank" rel="noopener">PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with a New Benchmark Dataset</a> got accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a> (IF: 20.4)!</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Apr 2026</span>
-          <span class="news-text">I attended <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> and presented our work <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a>.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Jan 2026</span>
-          <span class="news-text">Our work <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</a> got accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>! See you in Rio de Janeiro!</span>
-        </li>
-      </ul>
-    </section>
+      <!-- About -->
+      <section>
+        <h2 id="about">About Me<a class="anchor" href="#about">#</a></h2>
+        <p class="item">
+          I am a Ph.D. student at the
+          <a href="https://viclab.kaist.ac.kr" target="_blank" rel="noopener">Video and Image Computing Lab (VICLab)</a> at
+          <a href="https://kaist.ac.kr" target="_blank" rel="noopener">KAIST</a>,
+          advised by <a href="https://www.viclab.kaist.ac.kr/professor" target="_blank" rel="noopener">Prof. Munchurl Kim</a>.
+          I received my B.S. in Electrical Engineering from the
+          <a href="https://uplb.edu.ph/" target="_blank" rel="noopener">University of the Philippines Los Ba&ntilde;os</a> in 2018.
+          Currently, my research focuses on controllable image and video editing using generative models.
+        </p>
+        <p class="item">
+          Outside of research, I enjoy street and portrait photography.
+        </p>
+      </section>
 
-    <!-- Education -->
-    <section>
-      <h2>Education</h2>
-      <ul class="edu-list">
-        <li class="edu-item">
-          <div class="edu-date">Aug 2021 – Present</div>
-          <div class="edu-info">
-            <strong>Integrated M.S.-Ph.D. in Electrical Engineering</strong><br />
-            <a href="https://kaist.ac.kr" target="_blank" rel="noopener">Korea Advanced Institute of Science and Technology</a>, Daejeon, South Korea
-          </div>
-        </li>
-        <li class="edu-item">
-          <div class="edu-date">Jun 2013 – Jun 2018</div>
-          <div class="edu-info">
-            <strong>B.S. in Electrical Engineering, <em>Cum Laude</em></strong><br />
-            <a href="https://uplb.edu.ph/" target="_blank" rel="noopener">University of the Philippines Los Baños</a>, Los Baños, Laguna, Philippines
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Publications -->
-    <section>
-      <h2>Publications</h2>
-
-      <div class="pub-list">
-
-        <div class="pub-entry">
-          <div class="pub-thumb">
-            <video autoplay loop muted playsinline>
-              <source src="static/videos/motiongrounder.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="pub-info">
-            <p class="pub-title"><strong>MotionGrounder: Grounded Multi-Object Motion Transfer via Diffusion Transformer</strong></p>
-            <p class="pub-venue">Under Review</p>
-            <p class="pub-authors">
-              <strong>Samuel Teodoro</strong>, Yun Chen, Agus Gunawan, Soo Ye Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup>
-            </p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2604.00853" class="btn" target="_blank" rel="noopener">Paper</a>
-              <a href="https://kaist-viclab.github.io/motiongrounder-site/" class="btn" target="_blank" rel="noopener">Project Page</a>
+      <!-- News -->
+      <section>
+        <h2 id="news">News<a class="anchor" href="#news">#</a></h2>
+        <ul class="entries">
+          <li class="entry">
+            <div class="date-pill">Aug 2026</div>
+            <div class="entry-body">
+              Our work, <a href="https://kaist-viclab.github.io/primedit-site/" target="_blank" rel="noopener">PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with a New Benchmark Dataset</a>, got accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a> (IF: 20.4)!
             </div>
-          </div>
+          </li>
+          <li class="entry">
+            <div class="date-pill">Apr 2026</div>
+            <div class="entry-body">
+              I attended <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> and presented our work, <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a>.
+            </div>
+          </li>
+          <li class="entry">
+            <div class="date-pill">Jan 2026</div>
+            <div class="entry-body">
+              Our work, <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</a>, got accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>! See you in Rio de Janeiro!
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <h2 id="education">Education<a class="anchor" href="#education">#</a></h2>
+        <ul class="entries">
+          <li class="entry">
+            <div class="date-label">Aug 2021 &ndash; Present</div>
+            <div class="entry-body">
+              <strong>Integrated M.S.-Ph.D. in Electrical Engineering</strong>
+              <span class="place"><a href="https://kaist.ac.kr" target="_blank" rel="noopener">Korea Advanced Institute of Science and Technology</a>, Daejeon, South Korea</span>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="date-label">Jun 2013 &ndash; Jun 2018</div>
+            <div class="entry-body">
+              <strong>B.S. in Electrical Engineering, <em>Cum Laude</em></strong>
+              <span class="place"><a href="https://uplb.edu.ph/" target="_blank" rel="noopener">University of the Philippines Los Ba&ntilde;os</a>, Los Ba&ntilde;os, Laguna, Philippines</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section>
+        <h2 id="publications">Publications<a class="anchor" href="#publications">#</a></h2>
+
+        <div class="pubs">
+
+          <article class="pub">
+            <div class="pub-figure">
+              <video autoplay loop muted playsinline>
+                <source src="static/videos/motiongrounder.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div>
+              <div class="pub-tags">
+                <span class="pub-badge pub-badge--preprint">Preprint</span>
+                <span class="pub-venue">Under Review</span>
+              </div>
+              <p class="pub-title">MotionGrounder: Grounded Multi-Object Motion Transfer via Diffusion Transformer</p>
+              <p class="pub-authors">
+                <strong>Samuel Teodoro</strong>, Yun Chen, Agus Gunawan, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
+              </p>
+              <div class="chips">
+                <a href="https://arxiv.org/abs/2604.00853" class="chip" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/motiongrounder-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="pub-figure">
+              <img src="static/images/omnitext.png" alt="OmniText" />
+            </div>
+            <div>
+              <div class="pub-tags">
+                <span class="pub-badge pub-badge--conf">Conference</span>
+                <span class="pub-venue">ICLR 2026</span>
+              </div>
+              <p class="pub-title">OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</p>
+              <p class="pub-authors">
+                Agus Gunawan*, <strong>Samuel Teodoro*</strong>, Yun Chen, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
+              </p>
+              <div class="chips">
+                <a href="https://arxiv.org/abs/2510.24093" class="chip" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/omnitext-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
+                <a href="https://github.com/KAIST-VICLab/OmniText" class="chip" target="_blank" rel="noopener">Code</a>
+                <a href="https://drive.google.com/file/d/16J8wyhpGcFnYwZLWa_01DLUOczIKgHVy/view" class="chip" target="_blank" rel="noopener">Dataset</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="pub-figure">
+              <img src="static/images/primedit.png" alt="PRIMEdit" />
+            </div>
+            <div>
+              <div class="pub-tags">
+                <span class="pub-badge pub-badge--journal">Journal</span>
+                <span class="pub-venue"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a></span>
+              </div>
+              <p class="pub-title">PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with a New Benchmark Dataset</p>
+              <p class="pub-authors">
+                <strong>Samuel Teodoro*</strong>, Agus Gunawan*, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
+              </p>
+              <div class="chips">
+                <a href="https://arxiv.org/abs/2412.12877" class="chip" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/primedit-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
+                <a href="https://github.com/KAIST-VICLab/PRIMEdit" class="chip" target="_blank" rel="noopener">Code</a>
+                <a href="https://drive.google.com/file/d/1JByzWLx2U0ezr8GOMUkqcOv0Tr3Wcka-/view" class="chip" target="_blank" rel="noopener">Dataset</a>
+              </div>
+            </div>
+          </article>
+
         </div>
 
-        <div class="pub-entry">
-          <div class="pub-thumb">
-            <img src="static/images/omnitext.png" alt="OmniText"/>
-          </div>
-          <div class="pub-info">
-              <p class="pub-title"><strong>OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</strong></p>
-              <p class="pub-venue"><strong>ICLR 2026</strong></p>
-            <p class="pub-authors">
-              Agus Gunawan*, <strong>Samuel Teodoro*</strong>, Yun Chen, Soo Ye Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup>
-            </p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2510.24093" class="btn" target="_blank" rel="noopener">Paper</a>
-              <a href="https://kaist-viclab.github.io/omnitext-site/" class="btn" target="_blank" rel="noopener">Project Page</a>
-              <a href="https://github.com/KAIST-VICLab/OmniText" class="btn" target="_blank" rel="noopener">Code</a>
-              <a href="https://drive.google.com/file/d/16J8wyhpGcFnYwZLWa_01DLUOczIKgHVy/view" class="btn" target="_blank" rel="noopener">Dataset</a>
-            </div>
-          </div>
-        </div>
+        <p class="footnote">* Equal Contribution &nbsp;&middot;&nbsp; <sup>&dagger;</sup> Co-Corresponding Authors</p>
+      </section>
 
-        <div class="pub-entry">
-          <div class="pub-thumb">
-            <img src="static/images/primedit.png" alt="PRIMEdit" style="background:#ffffff;" />
-          </div>
-          <div class="pub-info">
-              <p class="pub-title"><strong>PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with a New Benchmark Dataset</strong></p>
-            <p class="pub-venue"><strong><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a></strong></p>
-            <p class="pub-authors">
-              <strong>Samuel Teodoro*</strong>, Agus Gunawan*, Soo Ye Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup>
-            </p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2412.12877" class="btn" target="_blank" rel="noopener">Paper</a>
-              <a href="https://kaist-viclab.github.io/primedit-site/" class="btn" target="_blank" rel="noopener">Project Page</a>
-              <a href="https://github.com/KAIST-VICLab/PRIMEdit" class="btn" target="_blank" rel="noopener">Code</a>
-              <a href="https://drive.google.com/file/d/1JByzWLx2U0ezr8GOMUkqcOv0Tr3Wcka-/view" class="btn" target="_blank" rel="noopener">Dataset</a>
-            </div>
-          </div>
-        </div>
+      <footer>
+        <p>Last updated August 2026</p>
+      </footer>
 
-      </div>
-      <p class="pub-footnote">* Equal Contribution &nbsp;&nbsp; <sup>†</sup> Co-Corresponding Authors</p>
-    </section>
-
-    <footer>
-      <p>Last updated August 2026</p>
-    </footer>
-
+    </main>
   </div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('themeToggle');
+      var root = document.documentElement;
+      function sync() {
+        btn.textContent = root.getAttribute('data-theme') !== 'light' ? 'Light' : 'Dark';
+      }
+      btn.addEventListener('click', function () {
+        var dark = root.getAttribute('data-theme') !== 'light';
+        if (dark) { root.setAttribute('data-theme', 'light'); }
+        else { root.removeAttribute('data-theme'); }
+        try { localStorage.setItem('st-theme', dark ? 'light' : 'dark'); } catch (e) {}
+        sync();
+      });
+      sync();
+    })();
+  </script>
 </body>
 </html>
