@@ -273,6 +273,8 @@ h2:hover .anchor { opacity: 1; }
 .date-pill {
   justify-self: start;
   align-self: start;
+  width: 82px;
+  text-align: center;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.9;
@@ -281,7 +283,7 @@ h2:hover .anchor { opacity: 1; }
   background: var(--pill-mint);
   border: 1px solid var(--date-fg);
   border-radius: 20px;
-  padding: 1px 12px;
+  padding: 1px 4px;
   margin-top: 2px;
 }
 
