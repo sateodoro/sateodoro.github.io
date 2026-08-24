@@ -309,7 +309,7 @@ h2:hover .anchor { opacity: 1; }
 .pub {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
-  gap: 22px;
+  gap: 20px;
   align-items: start;
   border: 1px solid var(--rule);
   border-radius: 10px;
@@ -333,7 +333,7 @@ h2:hover .anchor { opacity: 1; }
   background: var(--fig-plate);
   border: 1px solid var(--rule);
   border-radius: 8px;
-  padding: 8px;
+  padding: 5px;
 }
 
 .pub-figure img,
