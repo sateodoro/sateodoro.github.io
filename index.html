@@ -13,7 +13,15 @@
 </head>
 <body>
 
-  <button type="button" class="theme-toggle" id="themeToggle">Light</button>
+  <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle color theme">
+    <svg class="icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M12 2.6v2.4M12 19v2.4M21.4 12H19M5 12H2.6M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7M18.6 18.6l-1.7-1.7M7.1 7.1L5.4 5.4" />
+    </svg>
+    <svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1z" />
+    </svg>
+  </button>
 
   <div class="page">
 
@@ -64,19 +72,19 @@
           <li class="entry">
             <div class="date-pill">Aug 2026</div>
             <div class="entry-body">
-              Our work, <a href="https://kaist-viclab.github.io/primedit-site/" target="_blank" rel="noopener">PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with a New Benchmark Dataset</a>, got accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a> (IF: 20.4)!
+              &#127881; <a href="https://kaist-viclab.github.io/primedit-site/" target="_blank" rel="noopener">PRIMEdit</a> is accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a> (IF: 20.4)!
             </div>
           </li>
           <li class="entry">
             <div class="date-pill">Apr 2026</div>
             <div class="entry-body">
-              I attended <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> and presented our work, <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a>.
+              &#128483;&#65039; Presented <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a> at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> in Rio!
             </div>
           </li>
           <li class="entry">
             <div class="date-pill">Jan 2026</div>
             <div class="entry-body">
-              Our work, <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText: A Training-Free Generalists for Controllable Text-Image Manipulation</a>, got accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>! See you in Rio de Janeiro!
+              &#127881; <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a> is accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>! See you in Rio! &#127463;&#127479;
             </div>
           </li>
         </ul>
@@ -96,7 +104,7 @@
           <li class="entry">
             <div class="date-label">Jun 2013 &ndash; Jun 2018</div>
             <div class="entry-body">
-              <strong>B.S. in Electrical Engineering, <em>Cum Laude</em></strong>
+              <strong>B.S. in Electrical Engineering, <em>cum laude</em></strong>
               <span class="place"><a href="https://uplb.edu.ph/" target="_blank" rel="noopener">University of the Philippines Los Ba&ntilde;os</a>, Los Ba&ntilde;os, Laguna, Philippines</span>
             </div>
           </li>
@@ -192,7 +200,9 @@
       var btn = document.getElementById('themeToggle');
       var root = document.documentElement;
       function sync() {
-        btn.textContent = root.getAttribute('data-theme') !== 'light' ? 'Light' : 'Dark';
+        var dark = root.getAttribute('data-theme') !== 'light';
+        btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        btn.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
       }
       btn.addEventListener('click', function () {
         var dark = root.getAttribute('data-theme') !== 'light';

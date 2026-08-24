@@ -139,20 +139,25 @@ code {
   top: 18px;
   right: 20px;
   z-index: 20;
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 10px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
   color: var(--muted);
   background: var(--surface);
   border: 1px solid var(--rule);
-  border-radius: 20px;
-  padding: 6px 14px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
 .theme-toggle:hover { color: var(--blue); border-color: var(--blue); }
+
+.theme-toggle .icon { display: block; }
+.theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 /* ── I.4 Masthead: centered, circular portrait on top ────────────────── */
 .masthead {
