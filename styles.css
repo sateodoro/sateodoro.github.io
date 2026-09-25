@@ -271,6 +271,9 @@ h2:hover .anchor { opacity: 1; }
 
 .entry { display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 20px; }
 
+/* news: column sized to the pill so the text sits right beside it */
+.entries-news .entry { grid-template-columns: 82px minmax(0, 1fr); gap: 44px; }
+
 .entry-body { text-align: justify; hyphens: auto; }
 .entry-body .place { display: block; }
 
@@ -459,7 +462,7 @@ footer {
   .date-label { line-height: 1.6; }
 
   /* news keeps the date pill beside the text on small screens */
-  .entries-news .entry { grid-template-columns: 82px minmax(0, 1fr); gap: 12px; }
+  .entries-news .entry { grid-template-columns: 82px minmax(0, 1fr); gap: 20px; }
   .entries-news .entry-body { text-align: left; }
 
   .pub { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
