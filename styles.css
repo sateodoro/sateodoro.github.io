@@ -360,6 +360,8 @@ h2:hover .anchor { opacity: 1; }
   border: 1px solid transparent;
 }
 
+.pub-badge { text-transform: uppercase; }   /* venues in capitals (Sam, 2026-11-20) */
+
 .pub-badge--conf {
   color: var(--conf-fg);
   background: var(--pill-amber);
@@ -373,9 +375,9 @@ h2:hover .anchor { opacity: 1; }
 }
 
 .pub-badge--preprint {
-  color: var(--muted);
-  background: var(--pill-muted);
-  border-color: var(--muted);
+  color: var(--date-fg);
+  background: var(--pill-mint);
+  border-color: var(--date-fg);
 }
 
 .pub-badge a { color: inherit; }
@@ -449,8 +451,9 @@ footer {
   .date-label { line-height: 1.6; }
 
   /* news keeps the date pill beside the text on small screens */
-  .entries-news .entry { grid-template-columns: 82px minmax(0, 1fr); gap: 20px; }
-  .entries-news .entry-body { text-align: left; }
+  .entries-news .entry { grid-template-columns: 70px minmax(0, 1fr); gap: 12px; }
+  .entries-news .date-pill { width: 70px; font-size: 11px; }
+  .entries-news .entry-body { text-align: justify; hyphens: auto; }
 
   .pub { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
 }
