@@ -453,7 +453,7 @@ footer {
   /* news keeps the date pill beside the text on small screens */
   .entries-news .entry { grid-template-columns: 70px minmax(0, 1fr); gap: 12px; }
   .entries-news .date-pill { width: 70px; font-size: 11px; }
-  .entries-news .entry-body { text-align: justify; hyphens: auto; }
+  .entries-news .entry-body { text-align: justify; hyphens: manual; -webkit-hyphens: manual; }
 
   .pub { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
 }
