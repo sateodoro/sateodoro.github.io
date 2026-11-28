@@ -817,3 +817,6 @@ a { color: var(--au-blue); }
    and never allow horizontal scrolling (Sam, 2026-11-28) */
 .masthead::before { width: min(620px, 100%); }
 html, body { overflow-x: clip; }
+
+/* venue lines: one colour for every venue, Preprint included: the ICLR teal (Sam, 2026-11-28) */
+.pub-badge--preprint b, .pub-badge--conf b, .pub-badge--journal b { color: var(--au-teal); }
