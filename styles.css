@@ -812,3 +812,8 @@ a { color: var(--au-blue); }
 
 /* publications: left-aligned (not justified); words still never split with a hyphen (Sam, 2026-11-28) */
 .pub, .pub-title, .pub-authors, .pub .chips, .footnote { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+
+/* phones: the header glow was 620 px wide and pushed the page sideways; keep it inside the screen,
+   and never allow horizontal scrolling (Sam, 2026-11-28) */
+.masthead::before { width: min(620px, 100%); }
+html, body { overflow-x: clip; }
