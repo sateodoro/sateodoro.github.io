@@ -837,3 +837,24 @@ html, body { overflow-x: clip; }
   .page { max-width: 840px; }
   .entries .entry, .entries-news .entry { grid-template-columns: 176px minmax(0, 1fr); }
 }
+
+/* buttons: hover/focus fills solid with the aurora gradient (Sam, 2026-11-28) */
+.contact a, .chip, .theme-toggle { transition: color .2s, border-color .2s, transform .2s, background .2s; }
+.contact a:hover, .contact a:focus-visible,
+.chip:hover, .chip:focus-visible, section .chip:hover,
+.theme-toggle:hover, .theme-toggle:focus-visible {
+  background: var(--aurora);
+  border-color: transparent;
+  color: #04121a;
+  text-decoration: none;
+}
+.contact a:hover .ms, .contact a:focus-visible .ms,
+.chip:hover .ms, .chip:focus-visible .ms, section .chip:hover .ms,
+.theme-toggle:hover .ms, .theme-toggle:focus-visible .ms { color: #04121a; }
+/* light mode: hovered buttons use white text/icons (Sam, 2026-11-28) */
+[data-theme="light"] .contact a:hover, [data-theme="light"] .contact a:focus-visible,
+[data-theme="light"] .chip:hover, [data-theme="light"] .chip:focus-visible, [data-theme="light"] section .chip:hover,
+[data-theme="light"] .theme-toggle:hover, [data-theme="light"] .theme-toggle:focus-visible,
+[data-theme="light"] .contact a:hover .ms, [data-theme="light"] .contact a:focus-visible .ms,
+[data-theme="light"] .chip:hover .ms, [data-theme="light"] .chip:focus-visible .ms, [data-theme="light"] section .chip:hover .ms,
+[data-theme="light"] .theme-toggle:hover .ms, [data-theme="light"] .theme-toggle:focus-visible .ms { color: #fff; }
