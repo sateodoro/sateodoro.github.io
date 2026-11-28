@@ -843,7 +843,7 @@ html, body { overflow-x: clip; }
 .contact a:hover, .contact a:focus-visible,
 .chip:hover, .chip:focus-visible, section .chip:hover,
 .theme-toggle:hover, .theme-toggle:focus-visible {
-  background: var(--aurora);
+  background: var(--aurora) border-box; /* origin = border-box so the gradient does not tile under the transparent border (thin edge lines) */
   border-color: transparent;
   color: #04121a;
   text-decoration: none;
