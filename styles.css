@@ -809,3 +809,6 @@ a { color: var(--au-blue); }
   .entries-news .entry { grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
   .entries-news .date-label { white-space: nowrap; }
 }
+
+/* publications: left-aligned (not justified); words still never split with a hyphen (Sam, 2026-11-28) */
+.pub, .pub-title, .pub-authors, .pub .chips, .footnote { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
