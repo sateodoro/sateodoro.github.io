@@ -8,19 +8,15 @@
   if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300..700;1,300..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261126" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:wght@400..600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&icon_names=animation,blur_on,bolt,campaign,co_present,code,dark_mode,database,description,image,language,light_mode,mail,menu_book,movie,person,school,trophy&display=block" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261128" />
 </head>
 <body>
 
   <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle color theme">
-    <svg class="icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="4.2" />
-      <path d="M12 2.6v2.4M12 19v2.4M21.4 12H19M5 12H2.6M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7M18.6 18.6l-1.7-1.7M7.1 7.1L5.4 5.4" />
-    </svg>
-    <svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1z" />
-    </svg>
+    <span class="ms icon icon-sun" aria-hidden="true">light_mode</span>
+    <span class="ms icon icon-moon" aria-hidden="true">dark_mode</span>
   </button>
 
   <div class="page">
@@ -31,22 +27,23 @@
       <div class="avatar-fallback">ST</div>
       <h1>Samuel Teodoro</h1>
       <p class="sub">Ph.D. Student at KAIST</p>
+      <ul class="keywords" aria-label="Research keywords"><li><span class="ms" aria-hidden="true">movie</span>Video Editing</li><li><span class="ms" aria-hidden="true">image</span>Image Editing</li><li><span class="ms" aria-hidden="true">blur_on</span>Diffusion Models</li><li><span class="ms" aria-hidden="true">animation</span>Motion Transfer</li><li><span class="ms" aria-hidden="true">bolt</span>Training-Free Methods</li></ul>
       <p class="contact">
         <a href="mailto:sateodoro@kaist.ac.kr" aria-label="E-Mail" title="E-Mail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3.5 7l8.5 6.5L20.5 7" /></svg>
+          <span class="ms" aria-hidden="true">mail</span>
         </a>
         <a href="https://scholar.google.com/citations?user=-W-_ROYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.6 13.4 2 10.5 12 2.5l10 8-3.6 2.9" /><circle cx="12" cy="16" r="5.5" /></svg>
+          <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
         </a>
         <a href="https://github.com/sateodoro" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+          <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         </a>
         <a href="https://www.linkedin.com/in/samuel-teodoro/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.8 2.8 0 0 1 5.6 0V17" /></svg>
+          <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
 <!--        <a href="#" target="_blank" rel="noopener">X</a>-->
         <a href="https://drive.google.com/file/d/1c3aBZCaXHaERb1i7jS1olu3HLbffkF0u/view?usp=sharing" target="_blank" rel="noopener" aria-label="CV" title="CV">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5M9 13h6M9 17h6" /></svg>
+          <span class="ms" aria-hidden="true">description</span>
         </a>
       </p>
     </header>
@@ -55,7 +52,7 @@
 
       <!-- About -->
       <section>
-        <h2 id="about">About Me<a class="anchor" href="#about">#</a></h2>
+        <h2 id="about"><span class="h-ic"><span class="ms" aria-hidden="true">person</span></span>About Me<a class="anchor" href="#about">#</a></h2>
         <p class="item">
           I am a Ph.D. student at the
           <a href="https://viclab.kaist.ac.kr" target="_blank" rel="noopener">Video and Image Computing Lab (VICLab)</a> at
@@ -70,30 +67,30 @@
 
       <!-- News -->
       <section>
-        <h2 id="news">News<a class="anchor" href="#news">#</a></h2>
+        <h2 id="news"><span class="h-ic"><span class="ms" aria-hidden="true">campaign</span></span>News<a class="anchor" href="#news">#</a></h2>
         <ul class="entries entries-news">
           <li class="entry">
-            <div class="date-pill">Sep 2026</div>
+            <div class="date-label">Sep 2026</div>
             <div class="entry-body">
-              &#127881; <a href="https://kaist-viclab.github.io/motiongrounder-site/" target="_blank" rel="noopener">MotionGrounder</a> is accepted at <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener">NeurIPS 2026</a>! See you in Sydney!&nbsp;&#127462;&#127482;
+              <span class="ms n-ic" aria-hidden="true">trophy</span><a href="https://kaist-viclab.github.io/motiongrounder-site/" target="_blank" rel="noopener">MotionGrounder</a> is accepted at <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener">NeurIPS 2026</a>! See you in Sydney!&nbsp;&#127462;&#127482;
             </div>
           </li>
           <li class="entry">
-            <div class="date-pill">Aug 2026</div>
+            <div class="date-label">Aug 2026</div>
             <div class="entry-body">
-              &#127881; <a href="https://kaist-viclab.github.io/primedit-site/" target="_blank" rel="noopener">PRIMEdit</a> is accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a> (IF: 20.4)!
+              <span class="ms n-ic" aria-hidden="true">trophy</span><a href="https://kaist-viclab.github.io/primedit-site/" target="_blank" rel="noopener">PRIMEdit</a> is accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI</a> (IF: 20.4)!
             </div>
           </li>
           <li class="entry">
-            <div class="date-pill">Apr 2026</div>
+            <div class="date-label">Apr 2026</div>
             <div class="entry-body">
-              &#128483;&#65039; Presented <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a> as a poster at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> in Rio!
+              <span class="ms n-ic" aria-hidden="true">co_present</span>Presented <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a> as a poster at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a> in Rio!
             </div>
           </li>
           <li class="entry">
-            <div class="date-pill">Jan 2026</div>
+            <div class="date-label">Jan 2026</div>
             <div class="entry-body">
-              &#127881; <a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a> is accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>! See you in Rio!&nbsp;&#127463;&#127479;
+              <span class="ms n-ic" aria-hidden="true">trophy</span><a href="https://kaist-viclab.github.io/omnitext-site/" target="_blank" rel="noopener">OmniText</a> is accepted at <a href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>! See you in Rio!&nbsp;&#127463;&#127479;
             </div>
           </li>
         </ul>
@@ -101,12 +98,12 @@
 
       <!-- Education -->
       <section>
-        <h2 id="education">Education<a class="anchor" href="#education">#</a></h2>
+        <h2 id="education"><span class="h-ic"><span class="ms" aria-hidden="true">school</span></span>Education<a class="anchor" href="#education">#</a></h2>
         <ul class="entries">
           <li class="entry">
             <div class="date-label">Aug 2021 &ndash; Present</div>
             <div class="entry-body">
-              <strong>Integrated M.S.-Ph.D. in Electrical Engineering</strong>
+              <strong>Integrated <span class="nw">M.S.-Ph.D.</span> in Electrical Engineering</strong>
               <span class="place"><a href="https://kaist.ac.kr" target="_blank" rel="noopener">Korea Advanced Institute of Science and Technology</a>, Daejeon, South Korea</span>
             </div>
           </li>
@@ -122,7 +119,7 @@
 
       <!-- Publications -->
       <section>
-        <h2 id="publications">Publications<a class="anchor" href="#publications">#</a></h2>
+        <h2 id="publications"><span class="h-ic"><span class="ms" aria-hidden="true">menu_book</span></span>Publications<a class="anchor" href="#publications">#</a></h2>
 
         <div class="pubs">
 
@@ -134,15 +131,15 @@
             </div>
             <div>
               <div class="pub-tags">
-                <span class="pub-badge pub-badge--preprint">Preprint</span>
+                <span class="pub-badge pub-badge--preprint"><b>Preprint</b> · 2026</span>
               </div>
-              <p class="pub-title">TACO-Zero: Zero-Shot Multi-Reference Compositional Video Editing</p>
+              <p class="pub-title"><span class="nw">TACO-Zero</span>: <span class="nw">Zero-Shot</span> <span class="nw">Multi-Reference</span> Compositional Video Editing</p>
               <p class="pub-authors">
                 <strong>Samuel Teodoro</strong>, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
               </p>
               <div class="chips">
-                <a href="#" class="chip">Paper</a>
-                <a href="https://kaist-viclab.github.io/taco-zero-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
+                <a href="#" class="chip"><span class="ms" aria-hidden="true">description</span>Paper</a>
+                <a href="https://kaist-viclab.github.io/taco-zero-site/" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">language</span>Project Page</a>
               </div>
             </div>
           </article>
@@ -155,17 +152,17 @@
             </div>
             <div>
               <div class="pub-tags">
-                <span class="pub-badge pub-badge--conf">NeurIPS 2026</span>
+                <span class="pub-badge pub-badge--conf"><b>NeurIPS</b> · 2026</span>
               </div>
-              <p class="pub-title">MotionGrounder: Grounded Multi-Object Motion Transfer via Diffusion Transformer</p>
+              <p class="pub-title">MotionGrounder: Grounded <span class="nw">Multi-Object</span> Motion Transfer via Diffusion Transformer</p>
               <p class="pub-authors">
                 <strong>Samuel Teodoro</strong>, Yun Chen, Agus Gunawan, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
               </p>
               <div class="chips">
-                <a href="https://arxiv.org/abs/2604.00853" class="chip" target="_blank" rel="noopener">Paper</a>
-                <a href="https://kaist-viclab.github.io/motiongrounder-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
-                <a href="https://github.com/KAIST-VICLab/MotionGrounder" class="chip" target="_blank" rel="noopener">Code</a>
-                <a href="https://drive.google.com/file/d/1jBkU7AoOmeFdcYeSCzrK1cvcf_o0D5oK/view" class="chip" target="_blank" rel="noopener">Dataset</a>
+                <a href="https://arxiv.org/abs/2604.00853" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">description</span>Paper</a>
+                <a href="https://kaist-viclab.github.io/motiongrounder-site/" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">language</span>Project Page</a>
+                <a href="https://github.com/KAIST-VICLab/MotionGrounder" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">code</span>Code</a>
+                <a href="https://drive.google.com/file/d/1jBkU7AoOmeFdcYeSCzrK1cvcf_o0D5oK/view" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">database</span>Dataset</a>
               </div>
             </div>
           </article>
@@ -178,17 +175,17 @@
             </div>
             <div>
               <div class="pub-tags">
-                <span class="pub-badge pub-badge--journal"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener">IEEE TPAMI 2026</a></span>
+                <span class="pub-badge pub-badge--journal"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener"><b>IEEE TPAMI</b></a> · 2026</span>
               </div>
-              <p class="pub-title">PRIMEdit: Probability Redistribution for Instance-aware Multi-object Video Editing with a New Benchmark Dataset</p>
+              <p class="pub-title">PRIMEdit: Probability Redistribution for <span class="nw">Instance-aware</span> <span class="nw">Multi-object</span> Video Editing with a New Benchmark Dataset</p>
               <p class="pub-authors">
                 <strong>Samuel Teodoro*</strong>, Agus Gunawan*, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
               </p>
               <div class="chips">
-                <a href="https://arxiv.org/abs/2412.12877" class="chip" target="_blank" rel="noopener">Paper</a>
-                <a href="https://kaist-viclab.github.io/primedit-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
-                <a href="https://github.com/KAIST-VICLab/PRIMEdit" class="chip" target="_blank" rel="noopener">Code</a>
-                <a href="https://drive.google.com/file/d/1JByzWLx2U0ezr8GOMUkqcOv0Tr3Wcka-/view" class="chip" target="_blank" rel="noopener">Dataset</a>
+                <a href="https://arxiv.org/abs/2412.12877" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">description</span>Paper</a>
+                <a href="https://kaist-viclab.github.io/primedit-site/" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">language</span>Project Page</a>
+                <a href="https://github.com/KAIST-VICLab/PRIMEdit" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">code</span>Code</a>
+                <a href="https://drive.google.com/file/d/1JByzWLx2U0ezr8GOMUkqcOv0Tr3Wcka-/view" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">database</span>Dataset</a>
               </div>
             </div>
           </article>
@@ -199,17 +196,17 @@
             </div>
             <div>
               <div class="pub-tags">
-                <span class="pub-badge pub-badge--conf">ICLR 2026</span>
+                <span class="pub-badge pub-badge--conf"><b>ICLR</b> · 2026</span>
               </div>
-              <p class="pub-title">OmniText: A Training-Free Generalist for Controllable Text-Image Manipulation</p>
+              <p class="pub-title">OmniText: A <span class="nw">Training-Free</span> Generalist for Controllable <span class="nw">Text-Image</span> Manipulation</p>
               <p class="pub-authors">
                 Agus Gunawan*, <strong>Samuel Teodoro*</strong>, Yun Chen, Soo Ye Kim, Jihyong Oh<sup>&dagger;</sup>, Munchurl Kim<sup>&dagger;</sup>
               </p>
               <div class="chips">
-                <a href="https://arxiv.org/abs/2510.24093" class="chip" target="_blank" rel="noopener">Paper</a>
-                <a href="https://kaist-viclab.github.io/omnitext-site/" class="chip" target="_blank" rel="noopener">Project Page</a>
-                <a href="https://github.com/KAIST-VICLab/OmniText" class="chip" target="_blank" rel="noopener">Code</a>
-                <a href="https://drive.google.com/file/d/16J8wyhpGcFnYwZLWa_01DLUOczIKgHVy/view" class="chip" target="_blank" rel="noopener">Dataset</a>
+                <a href="https://arxiv.org/abs/2510.24093" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">description</span>Paper</a>
+                <a href="https://kaist-viclab.github.io/omnitext-site/" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">language</span>Project Page</a>
+                <a href="https://github.com/KAIST-VICLab/OmniText" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">code</span>Code</a>
+                <a href="https://drive.google.com/file/d/16J8wyhpGcFnYwZLWa_01DLUOczIKgHVy/view" class="chip" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">database</span>Dataset</a>
               </div>
             </div>
           </article>
