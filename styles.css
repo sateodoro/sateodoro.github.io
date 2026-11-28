@@ -820,3 +820,20 @@ html, body { overflow-x: clip; }
 
 /* venue lines: one colour for every venue, Preprint included: the ICLR teal (Sam, 2026-11-28) */
 .pub-badge--preprint b, .pub-badge--conf b, .pub-badge--journal b { color: var(--au-teal); }
+
+/* desktop: text one step smaller (Sam, 2026-11-28); phones keep their own sizes above */
+@media (min-width: 641px) {
+  :root { --label: 12px; }
+  body, .item { font-size: 17px; }
+  .masthead h1 { font-size: 54px; }
+  .masthead .sub { font-size: 19px; }
+  h2 { font-size: 31px; }
+  .h-ic { width: 40px; height: 40px; }
+  .h-ic .ms { font-size: 22px; }
+  .entry-body .place { font-size: 16px; }
+  .pub-title { font-size: 19px; }
+  .pub-authors { font-size: 15px; }
+  .footnote, footer { font-size: 13px; }
+  .page { max-width: 840px; }
+  .entries .entry, .entries-news .entry { grid-template-columns: 176px minmax(0, 1fr); }
+}
