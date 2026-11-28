@@ -790,3 +790,22 @@ a { color: var(--au-blue); }
   color: var(--text); padding: 6px 12px; border-radius: var(--r-sm); background: var(--faint); border: 1px solid var(--rule);
 }
 .keywords .ms { font-size: 17px; color: var(--au-teal); }
+
+/* phones (Sam, 2026-11-28): smaller text; News keeps date and text on the same line */
+@media (max-width: 640px) {
+  body, .item { font-size: 15.5px; line-height: 1.75; }
+  .masthead h1 { font-size: 36px; }
+  .masthead .sub { font-size: 17px; }
+  :root { --label: 11.5px; }
+  .keywords li { padding: 5px 10px; }
+  .keywords .ms { font-size: 15px; }
+  h2 { font-size: 24px; margin-bottom: 24px; }
+  .h-ic { width: 34px; height: 34px; }
+  .h-ic .ms { font-size: 20px; }
+  section { margin-bottom: 56px; }
+  .entry-body .place { font-size: 14.5px; }
+  .pub-title { font-size: 17px; }
+  .pub-authors { font-size: 13.5px; }
+  .entries-news .entry { grid-template-columns: 76px minmax(0, 1fr); gap: 12px; }
+  .entries-news .date-label { white-space: nowrap; }
+}
